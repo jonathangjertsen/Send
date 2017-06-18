@@ -1,0 +1,19 @@
+{
+    "name": "jonathan/send",
+    "description": "A single function, send(), which performs one HTTP request.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Reichelt Gjertsen",
+            "email": "jonath.re@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^5.6",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "files": ["src/Send.php"]
+    }
+}
