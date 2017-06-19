@@ -1,5 +1,9 @@
 Send provides a single function, send(), which performs one HTTP request.
 
+## Install
+
+    composer require jonathrg/send
+
 ## Usage
 
     use function Send\send;
