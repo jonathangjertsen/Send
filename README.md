@@ -6,11 +6,20 @@ Send provides a single function, send(), which performs one HTTP request.
 
 ## Usage
 
+Provide `send()` with an array defining your request to perform that request.
+The result is returned as a string.
+
+Here is the simplest possible use-case, which retrieves the example.org frontpage and prints it:
+
+    <?php
+    require_once __DIR__.'path/to/vendor/autoload.php';
+
     use function Send\send;
 
-Provide `send()` with an array defining your request to perform that request.
+    echo(send(['url' => 'http://example.org']));
 
-Get stuff:
+
+### Get stuff
 
     // Get the webpage for example.org
     
@@ -18,7 +27,7 @@ Get stuff:
         'url' => 'http://example.org',
     ]);
     
-Post stuff:
+### Post stuff
 
     // Get the webpage for example.org
     
@@ -28,7 +37,9 @@ Post stuff:
         'data' => $data
     ]);
 
-You can of course also put stuff and delete stuff.
+### Put and delete stuff
+
+You can of course also put stuff and delete stuff by setting 'method' to 'DELETE' or 'PUT'.
 
 ## Defining the request
 
