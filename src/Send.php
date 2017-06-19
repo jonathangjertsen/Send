@@ -6,10 +6,10 @@ namespace Send;
  *
  * The request
  * -----------
- * The $request parameter should contain all the data about your request. The only required field for the $request
+ * The $request array should contain all the data about your request. The only required field for the $request
  * parameter is 'url' (which should be a valid URL). 'method' must be one of 'GET', 'POST', 'PUT' and 'DELETE', and
  * is 'GET' by default. If you are sending a POST request, you should also populate the 'data' field with the POST
- * fields. For other request parameters, see the $curl_dictionary array defined at the bottom of this class.
+ * fields. For other request parameters, see the $curl_dictionary array defined at the beginning of this function
  *
  * The response
  * ------------
@@ -17,9 +17,9 @@ namespace Send;
  * expected response is JSON or XML respectively) to convert it to an appropriate format.
  *
  * @param array       $request An array containing the request data.
- * @param null|String $error   Returned error message if set
+ * @param null|String $error   If provided, this will be set to a string containing any errors.
  *
- * @return null|string String containing the response from the server, or NULL if the request is invalid
+ * @return null|string String containing the response from the server, or NULL if the request is invalid.
  */
 function send($request, &$error = null)
 {
