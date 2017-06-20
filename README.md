@@ -30,7 +30,7 @@ Here is the simplest possible use-case, which retrieves the example.org frontpag
     
 ### Post stuff
 
-    // Post something to the webpage for example.org
+    // Post something to the webpage for example.org
     
     $response = send([
         'url' => 'http://example.org',
