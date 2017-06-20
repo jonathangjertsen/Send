@@ -25,11 +25,12 @@ Here is the simplest possible use-case, which retrieves the example.org frontpag
     
     $response = send([
         'url' => 'http://example.org',
-    ]);
+        'headers' => $headers
+    ]);
     
 ### Post stuff
 
-    // Get the webpage for example.org
+    // Post something to the webpage for example.org
     
     $response = send([
         'url' => 'http://example.org',
