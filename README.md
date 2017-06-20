@@ -9,7 +9,7 @@ Send provides a single function, send(), which performs one HTTP request.
 Provide `send()` with an array defining your request to perform that request.
 The result is returned as a string.
 
-Here is the simplest possible use-case, which retrieves the example.org frontpage and prints it:
+Here is the simplest possible use-case, which retrieves the example.org frontpage and prints it. You can test this by serving the repo and going to Send/examples/example.php on localhost.
 
     <?php
     require_once __DIR__.'path/to/vendor/autoload.php';
@@ -21,12 +21,12 @@ Here is the simplest possible use-case, which retrieves the example.org frontpag
 
 ### Get stuff
 
-    // Get the webpage for example.org
+    // Get the webpage for example.org and send some headers
     
     $response = send([
         'url' => 'http://example.org',
-        'headers' => $headers
-    ]);
+        'headers' => $headers
+    ]);
     
 ### Post stuff
 
